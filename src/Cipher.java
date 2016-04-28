@@ -9,8 +9,8 @@ import java.io.UnsupportedEncodingException;
 public class Cipher {
 
 
-	public void setPublicKey(int hash) {
-		publicKey = new byte[] { (byte) hash };
+	public void setPublicKey(byte[] hash) {
+		publicKey =hash;
 	}
 
 	private byte[] publicKey;

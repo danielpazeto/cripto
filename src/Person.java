@@ -1,5 +1,4 @@
 
-
 import java.util.Random;
 
 public class Person {
@@ -28,7 +27,7 @@ public class Person {
 
 	public void setOtherPublicKey(int otherPersonKey) {
 		this.hash = otherPersonKey * privateKey;
-		c.setPublicKey(this.hash);
+		c.setPublicKey(new byte[] { (byte) this.hash });
 	}
 
 	public byte[] getEncriptedMsg() {
