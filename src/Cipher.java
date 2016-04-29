@@ -1,5 +1,4 @@
 
-
 import java.io.UnsupportedEncodingException;
 
 /**
@@ -8,18 +7,18 @@ import java.io.UnsupportedEncodingException;
  */
 public class Cipher {
 
-
 	public void setPublicKey(byte[] hash) {
-		publicKey =hash;
+		publicKey = hash;
 	}
 
 	private byte[] publicKey;
 
-	public byte[] cripto(String msg) {
+	public byte[] cript(String msg) {
 
 		try {
 			byte[] chars = msg.getBytes("US-ASCII");
 			byte[] criptedChars = new byte[chars.length];
+			//Itera cada letra da msg com cada byte da public key num XOR
 			for (int i = 0; i < chars.length; i++) {
 				criptedChars[i] = chars[i];
 				for (int j = 0; j < publicKey.length; j++) {
@@ -34,7 +33,7 @@ public class Cipher {
 
 	}
 
-	public byte[] descripto(byte[] msg) {
+	public byte[] decript(byte[] msg) {
 
 		byte[] descriptedChars = new byte[msg.length];
 

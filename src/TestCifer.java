@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class TestCifer {
 
 	public static void main(String[] args) {
-		testSimpleCripto();
+		//testSimpleCripto();
 		System.out.println("\n\n\n");
 		testAsymCripto();
 	}
@@ -23,11 +23,11 @@ public class TestCifer {
 		Cipher c = new Cipher();
 		c.setPublicKey(key);
 
-		byte[] criptedMsg = c.cripto(msgToSend);
+		byte[] criptedMsg = c.cript(msgToSend);
 		System.out.println("Mensagem após aplicada a criptografia: "+Arrays.toString(criptedMsg));
 
 		
-		byte[] decriptedMsg = c.descripto(criptedMsg);
+		byte[] decriptedMsg = c.decript(criptedMsg);
 		System.out.println("Mensagem descriptada a partir da msg encriptada: "+new String(decriptedMsg));
 	}
 
@@ -44,7 +44,7 @@ public class TestCifer {
 		
 		System.out.println("Publica de A:"+A.publicKey);
 		System.out.println("Publica de B:"+B.publicKey);
-		//trocam as chaves publicas
+		//trocam as chaves publicas/hash com a conta efetuada
 		A.changePublicWith(B);
 
 		//A encripta, ja com tudo feito

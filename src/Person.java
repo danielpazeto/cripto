@@ -31,11 +31,11 @@ public class Person {
 	}
 
 	public byte[] getEncriptedMsg() {
-		return c.cripto(msg);
+		return c.cript(msg);
 	}
 
 	public byte[] receiveEncriptedMsgAndDesencript(byte[] encriptedMsg) {
-		return c.descripto(encriptedMsg);
+		return c.decript(encriptedMsg);
 
 	}
 }
